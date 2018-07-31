@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tables Page</title>
+
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<div class="container">o
+
+		<div class="jumbotron">
+			<h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Restaurante de Fuego Group Work</h1>
+			<hr>
+			<h2 class="text-center">Current Reservations and Waiting List</h2>
+			<br>
+
+			<div class="text-center">
+                <a href="reservation.html"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
+                <a href="tables.html"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> View Tables</button></a>
+
+			</div>
+		</div>
+
+		<div class="row">
+      <!-- Reservation Form -------------->
+      <form>
+        <!-- Name ------------------------>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="nameBox" placeholder="Enter your full name.....">
+          <small id="nameBox" class="form-text text-muted">We'll never share your name with anyone else.</small>
+        </div>
+        <!-- Phone ------------------------>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" class="form-control" id="phone" aria-describedby="phoneBox" placeholder="Enter your phone number.....">
+          <small id="phoneBox" class="form-text text-muted">We'll never share your # with anyone else.</small>
+        </div>
+        <!-- Email ------------------------>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailBox" placeholder="Enter your email address.....">
+          <small id="emailBox" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <!-- User ID------------------------>
+        <div class="form-group">
+          <label for="userID">User ID</label>
+          <input type="text" class="form-control" id="User ID" aria-describedby="userBox" placeholder="Enter your User ID.....">
+          <small id="userBox" class="form-text text-muted">We'll never share your User ID with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+			<div class="col-lg-12">
+	    <footer class="footer">
+	      <div class="container">
+	      	<p>Control Panel</p>
+	        <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+	      </div>
+	    </footer>
+
+	</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$("#submitForm").on("click", function(event) {
+
+  // event.preventDefault() can be used to prevent an event's default behavior.
+  // Here, it prevents the submit button from trying to submit a form when clicked
+  event.preventDefault();
+
+  // Here we grab the text from the input box
+  var name = $("#name").val();
+  var phone = $("#phone").val();
+  var email = $("#email").val();
+  var userID = $("#userID").val();
+
+  // Here we construct our URL
+  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+
+  // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
+  // and display it in the div with an id of movie-view
+
+  // ------YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE.
+
+  $.ajax({
+    url: queryURL,
+    method: "POST"
+  }).then(function(response) {
+
+  });
+
+  // -----------------------------------------------------------------------
+
+});
+
+$("#clear").on("click", function(event) {
+  
+}
+
+
+
+</script>
+</html>
