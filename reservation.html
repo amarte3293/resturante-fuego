@@ -21,7 +21,11 @@
 			<br>
 
 			<div class="text-center">
+<<<<<<< HEAD
                 <a href="/reservation.html"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
+=======
+                <a href="reservation.html"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
+>>>>>>> 38fd5211ae4594b74aec7b2731b3cf26db837d46
                 <a href="tables.html"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> View Tables</button></a>
 
 			</div>
@@ -57,8 +61,13 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
+<<<<<<< HEAD
 			<div class="col-lg-12">
 
+=======
+
+			<div class="col-lg-12">
+>>>>>>> 38fd5211ae4594b74aec7b2731b3cf26db837d46
 	    <footer class="footer">
 	      <div class="container">
 	      	<p>Control Panel</p>
@@ -69,3 +78,47 @@
 	</div>
 
 </body>
+<<<<<<< HEAD
+=======
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$("#submitForm").on("click", function(event) {
+
+  // event.preventDefault() can be used to prevent an event's default behavior.
+  // Here, it prevents the submit button from trying to submit a form when clicked
+  event.preventDefault();
+
+  // Here we grab the text from the input box
+  var name = $("#name").val();
+  var phone = $("#phone").val();
+  var email = $("#email").val();
+  var userID = $("#userID").val();
+
+  // Here we construct our URL
+  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+
+  // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
+  // and display it in the div with an id of movie-view
+
+  // ------YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE.
+
+  $.ajax({
+    url: queryURL,
+    method: "POST"
+  }).then(function(response) {
+
+  });
+
+  // -----------------------------------------------------------------------
+
+});
+
+$("#clear").on("click", function(event) {
+  
+}
+
+
+
+</script>
+</html>
+>>>>>>> 38fd5211ae4594b74aec7b2731b3cf26db837d46
