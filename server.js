@@ -40,12 +40,12 @@ app.get("/", function(req, res){
 
 app.get("/api/tables", function(req, res){
     res.sendFile(path.join(__dirname, "tables.html"));
-    return res.json(reservationList, waitList);
+    return res.json(reservation, waitList);
 });
 
 app.get("/reserve", function(req, res){
     res.sendFile(path.join(__dirname, "reserve.html"));
-        
+
 });
 
 //Create new reservation
